@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 15px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"], input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .checkbox-container {
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registro de Usuario</h1>
+    <form action="http://127.0.0.1:8000/fotos" method="post" enctype="multipart/form-data">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre" required>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" placeholder="Introduce tu dirección" required>
+
+        <label for="fotografia">Fotografía:</label>
+        <input type="file" id="fotografia" name="fotografia" accept="image/*" required>
+
+        <div class="checkbox-container">
+            <input type="checkbox" id="vip" name="vip">
+            <label for="vip">¿Eres VIP?</label>
+        </div>
+
+        <button type="submit">Registrar</button>
+    </form>
+</body>
+</html>
